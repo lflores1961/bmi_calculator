@@ -1,24 +1,12 @@
-# README
+# Body Mass Index Calculator for club members
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+Club members may register to ask for the BMI automated assessment  
 
-Things you may want to cover:
+## User stories
+* As a club member you should be able to register in order to use the body mass index Calculator
+* As a member you should be able to calculate your BMI in order to know if you are overweight or underweight
+* Any time you modify your mass you will obtain a new BMI
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Programmer
+Luis Fernando Flores Oviedo
