@@ -1,3 +1,32 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+section.mid_section {
+  padding: 10px 0;
+  margin-top: 10px;
+  h2 {
+    font-size: 1.4em;
+    text-align: left;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 0px;
+  }
+  p {
+    padding-top: 5px;
+    border-top: 1px solid;
+    color: #808080;
+    font: 15px arial, sans-serif;
+  }
+}
+
+.calculator_img {
+  width: 100px;
+  height: 60px;
+}
+
+section#bmi_result {
+  h2 {
+    font-size: 2em;
+    color: #008000;
+  }
+}

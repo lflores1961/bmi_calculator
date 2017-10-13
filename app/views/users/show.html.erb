@@ -3,5 +3,17 @@
     <section class="user_info">
       <h1><%= @user.name %></h1>
     </section>
+    <section class="bmi_form">
+      <%= render 'shared/bmi_form' %>
+    </section>
+    <section id="bmi_result">
+    </section>
   </aside>
+  <div class="col-md-6">
+    <section class="mid_section">
+      <p>The WHO regards a BMI of less than 18.5 as underweight and may indicate malnutrition, an eating disorder, or other health problems, while a BMI equal to or greater than 25 is considered overweight and above 30 is considered obese. These ranges of BMI values are valid only as statistical categories.</p>
+      <h2>BMI standard table</h2>
+      <%= image_tag "BMItable.png", alt: "BMI stardard table" %>
+    </section>
+  </div>
 </div>
