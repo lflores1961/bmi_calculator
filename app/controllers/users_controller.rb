@@ -33,21 +33,25 @@ class UsersController < ApplicationController
     }
     weight = params[:mass].to_f
     height = params[:height].to_f
-    puts weight
-    puts height
-    @resultado = ''
-    @bmi = weight / height ** 2
-    bmi_table.each do |advice, range|
-      puts advice
-      puts range[:from], range[:to]
-      puts @bmi
-      if (@bmi > range[:from]) && (@bmi < range[:to])
-        @resultado = advice
+    if weight > 0 && height > 0
+      puts weight
+      puts height
+      @resultado = ''
+      @bmi = weight / height ** 2
+      bmi_table.each do |advice, range|
+        puts advice
+        puts range[:from], range[:to]
+        puts @bmi
+        if (@bmi > range[:from]) && (@bmi < range[:to])
+          @resultado = advice
+        end
       end
-    end
-    respond_to do |format|
-      format.html
-      format.json { render json: {bmi_calcul: @resultado} }
+      respond_to do |format|
+        format.html
+        format.json { render json: {bmi_calcul: @resultado} }
+      end
+    else
+      redirect_to current_user
     end
   end
 
