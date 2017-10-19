@@ -19,14 +19,17 @@ section.mid_section {
   }
 }
 
-.calculator_img {
+#calculator-img {
   width: 100px;
   height: 60px;
 }
 
-section#bmi_result {
-  h2 {
+#bmi-result {
     font-size: 2em;
     color: #008000;
-  }
+}
+
+#bmi-bmi {
+  font-size: .8em;
+  color: #808080;
 }

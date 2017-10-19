@@ -2,9 +2,10 @@
 //# All this logic will automatically be available in application.js.
 //# You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready( function(){
-  $("#height").change( function(){
-    $.getJSON('/calculator', function(data) {
-      $("#bmi_result").text(data.resultado)
-    });
+  $("#bmi_form").on("ajax:success", function(evt, data, status, xhr){
+      var res = data.resultado;
+      var bmi = data.bmi;
+      $("#bmi-result").html(res);
+      $("#bmi-bmi").html("BMI = " + bmi);
   });
 });

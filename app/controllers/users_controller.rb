@@ -36,19 +36,18 @@ class UsersController < ApplicationController
     if weight > 0 && height > 0
       puts weight
       puts height
-      @resultado = ''
+      resultado = ''
       @bmi = weight / height ** 2
       bmi_table.each do |advice, range|
         puts advice
         puts range[:from], range[:to]
         puts @bmi
         if (@bmi > range[:from]) && (@bmi < range[:to])
-          @resultado = advice
+          resultado = advice
         end
       end
       respond_to do |format|
-        format.html
-        format.json { render json: {bmi_calcul: @resultado} }
+        format.json { render json: {resultado: resultado, bmi: @bmi } }
       end
     else
       redirect_to current_user

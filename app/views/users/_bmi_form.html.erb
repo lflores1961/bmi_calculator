@@ -1,9 +1,9 @@
-<%= form_tag calculator_path, method: "get", class: "navbar-left" do %>
+<%= form_tag calculator_path, method: "get", remote: true, class: "navbar-left", id: "bmi_form" do %>
   <%= label_tag :mass, "Your mass (weight) in Kg" %>
   <%= number_field_tag :mass, params[:mass], step: 0.01, class: "form-control" %>
 
   <%= label_tag :height, "Your height in meters" %>
   <%= number_field_tag :height, params[:height], step: 0.01, class: "form-control" %>
 
-  <%= image_submit_tag("BMI.gif", class: "calculator_img") %>
+  <%= image_submit_tag("BMI.gif", id: "calculator-img") %>
 <% end %>
